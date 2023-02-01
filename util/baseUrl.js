@@ -1,0 +1,1 @@
+export const serverUrl = 'https://pizza-order-bh7w0ilqc-omotoshoayomikun.vercel.app/' 

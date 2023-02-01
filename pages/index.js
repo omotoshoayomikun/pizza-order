@@ -8,6 +8,7 @@ import axios from 'axios';
 import AddButton from '../components/AddButton';
 import { useState } from 'react';
 import Add from '../components/Add';
+import { serverUrl } from '../util/baseUrl';
 
 export default function Home({pizzaList, admin}) {
   const [close, setclose] = useState(true)
@@ -37,7 +38,7 @@ export async function getServerSideProps(ctx) {
   if(myCookie.token === process.env.TOKEN) {
     admin = true
   }
-  const res = await axios.get('http://localhost:3000/api/Products')
+  const res = await axios.get(`${serverUrl}/api/Products`)
   return {
     props: {
       pizzaList: res.data,
