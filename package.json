@@ -1,0 +1,35 @@
+{
+  "name": "next-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@paypal/react-paypal-js": "^7.7.0",
+    "@reduxjs/toolkit": "^1.8.1",
+    "axios": "^0.27.2",
+    "cookie": "^0.5.0",
+    "mongoose": "^6.3.3",
+    "next": "12.1.5",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-redux": "^8.0.1",
+    "realm-web": "^1.7.0",
+    "redux": "^4.2.0",
+    "tailwindcss": "^3.0.24"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "12.1.5",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0"
+  }
+}
