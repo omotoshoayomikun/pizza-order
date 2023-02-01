@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react'
 import styles from '../styles/Add.module.css'
+import { serverUrl } from '../util/baseUrl';
 
 
 const Add = ({setClose}) => {
@@ -42,7 +43,7 @@ const Add = ({setClose}) => {
             const newProduct = {
                 title, desc, img: url, prices, extraOptions
             };
-            await axios.post("http://localhost:3000/api/Products", newProduct);
+            await axios.post(`${serverUrl}/api/Products`, newProduct);
             console.log(newProduct)
             setClose(true);
         }

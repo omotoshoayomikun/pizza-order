@@ -2,6 +2,7 @@ import Image from 'next/image'
 import axios from 'axios'
 import styles from '../../styles/Admin.module.css'
 import { useState } from 'react'
+import { serverUrl } from '../../util/baseUrl'
 
 const Admin = ({products, orders}) => {
 
@@ -16,7 +17,7 @@ const Admin = ({products, orders}) => {
         const currentStatus = item.status
 
         try {
-            const res = await axios.put('http://localhost:3000/api/Orders/'+id, {status: currentStatus + 1});
+            const res = await axios.put(`${serverUrlerUrl}/api/Orders/`+id, {status: currentStatus + 1});
             setOrderList([
                 res.data, 
                 ...orderList.filter(order => order._id !== id)
@@ -29,7 +30,7 @@ const Admin = ({products, orders}) => {
     
     const handleDelete = async (id) => {
         try {
-           const res = await axios.delete(`http://localhost:3000/api/Products/`+id);
+           const res = await axios.delete(`${serverUrl}/api/Products/`+id);
             setPizzaList(pizzaList.filter(pizza => pizza._id !== id))
         }
         catch(err) {
@@ -116,8 +117,8 @@ export const getServerSideProps = async (ctx) => {
           }
       }
   }
-    const productRes = await axios.get('http://localhost:3000/api/Products/');
-    const ordersRes = await axios.get('http://localhost:3000/api/Orders')
+    const productRes = await axios.get(`${serverUrl}/api/Products/`);
+    const ordersRes = await axios.get(`${serverUrl}/api/Orders`)
 
     return {
         props: {
