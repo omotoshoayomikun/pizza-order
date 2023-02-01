@@ -10,7 +10,7 @@ const PizzaList = ({ PizzaList }) => {
             <p className={styles.desc}>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. to a jumbled Latin version of a
                 passage from de Finibus Bonorum et Malorum, a treatise on the theory
-                of ethics written by Cicero in 45 B.C. The passage "Lorem ipsum
+                of ethics written by Cicero in 45 B.C. The passage Lorem ipsum
             </p>
             <div className={styles.wrapper}>
                 {
