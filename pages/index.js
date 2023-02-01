@@ -22,7 +22,9 @@ export default function Home({pizzaList, admin}) {
       </Head>
       <Slider />
       {admin && (<AddButton  setClose={setclose} />)}
-      <PizzaList PizzaList={pizzaList} />
+      {
+        pizzaList && <PizzaList PizzaList={pizzaList} />
+      }
       {!close && (<Add setClose={setclose}/>)}
     </>
   )
